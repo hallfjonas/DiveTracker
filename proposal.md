@@ -1,4 +1,4 @@
-accordinglyintentionallyintentionally# Dive Tracker Proposal
+# Dive Tracker Proposal
 
 ## Summary
 
