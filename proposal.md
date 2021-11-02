@@ -42,7 +42,7 @@ Challenges to solve:
   - geometry of cable as angle θ changes with drag underwater
   - positioning buoy based on light intensity of beacon.
 
-### Phase 3 - Full side model, swimming pool test
+### Phase 3 - Full size model, swimming pool test
 
 Intended Features:
   - full size version of robot
