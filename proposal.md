@@ -30,7 +30,7 @@ Challenges to solve:
   - robot controls based of camera image
   - waterproofing
 
-![Phase 1 Sketch](https://github.com/hallfjonas/DiveTracker/blob/main/Phase1-sketch.jpeg)
+<img src="https://github.com/hallfjonas/DiveTracker/blob/main/Phase1-sketch.jpeg" alt="Phase 1 Sketch" width="200"/>
 
 ### Phase 2 - Scale model, cable line, mobile float, and camera tracking
 
@@ -44,7 +44,7 @@ Challenges to solve:
   - geometry of cable as angle θ changes with drag underwater
   - positioning buoy based on light intensity of beacon.
 
-![Phase 2 Sketch](https://github.com/hallfjonas/DiveTracker/blob/main/Phase2-sketch.jpeg)
+<img src="https://github.com/hallfjonas/DiveTracker/blob/main/Phase2-sketch.jpeg" alt="Phase 2 Sketch" width="200"/>
 
 ### Phase 3 - Full size model, swimming pool test
 
