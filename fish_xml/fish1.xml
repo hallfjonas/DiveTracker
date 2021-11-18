@@ -1,0 +1,26 @@
+<annotation>
+	<folder>fish_photos</folder>
+	<filename>fish1.jpeg</filename>
+	<path>C:\Users\hallf\Documents\GitHub\DiveTracker\fish_photos\fish1.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>720</width>
+		<height>960</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>danger</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>193</xmin>
+			<ymin>367</ymin>
+			<xmax>356</xmax>
+			<ymax>553</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -12,24 +12,20 @@ from tensorflow.keras.layers import Input, Conv2D, Dense, Flatten, BatchNormaliz
 
 # Create emojis dictionary
 emojis = {
-    0: {'name': 'happy', 'file': '1F642.png'},
-    1: {'name': 'laughing', 'file': '1F602.png'},
-    2: {'name': 'skeptical', 'file': '1F928.png'},
-    3: {'name': 'sad', 'file': '1F630.png'},
-    4: {'name': 'cool', 'file': '1F60E.png'},
-    5: {'name': 'whoa', 'file': '1F62F.png'},
-    6: {'name': 'crying', 'file': '1F62D.png'},
-    7: {'name': 'puking', 'file': '1F92E.png'},
-    8: {'name': 'nervous', 'file': '1F62C.png'}
+    0: {'name': 'none'},
+    1: {'name': 'diver', 'file': '1F642.png'},
+    2: {'name': 'fish', 'file': '1F602.png'},
+    3: {'name': 'rock', 'file': '1F928.png'}
 }
 
 # Add the images to the emoji dictionary
 for class_id, values in emojis.items():
-    png_file = Image.open(os.path.join('emojis', values['file'])).convert('RGBA')
-    png_file.load()
-    new_file = Image.new("RGB", png_file.size, (255, 255, 255))
-    new_file.paste(png_file, mask=png_file.split()[3])
-    emojis[class_id]['image'] = new_file
+    if (values['name'] != 'none'):
+        png_file = Image.open(os.path.join('emojis', values['file'])).convert('RGBA')
+        png_file.load()
+        new_file = Image.new("RGB", png_file.size, (255, 255, 255))
+        new_file.paste(png_file, mask=png_file.split()[3])
+        emojis[class_id]['image'] = new_file
 
 # Show all the emojis
 def plot_emojis():
@@ -46,9 +42,13 @@ def plot_emojis():
 def create_example():
     class_id = np.random.randint(0, len(emojis))
     image = np.ones((144,144,3)) * 255
-    row = np.random.randint(0, 72)
-    col = np.random.randint(0, 72)
-    image[row: row+72, col: col+72, :] = np.array(emojis[class_id]['image'])
+
+    # If class is not none, then include the graphic (with some rotation and stretch)
+    if (class_id > 0):
+        row = np.random.randint(0, 72)
+        col = np.random.randint(0, 72)
+        image[row: row+72, col: col+72, :] = np.array(emojis[class_id]['image'])
+
     return image.astype('uint8'), class_id, (row + 10) / 144, (col + 10) / 144
 
 # Plot bounding boxes
