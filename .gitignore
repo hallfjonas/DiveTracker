@@ -1,0 +1,8 @@
+train
+test
+/Documentation/*.aux
+/Documentation/*.fdb_latexmk
+/Documentation/*.fls
+/Documentation/*.log
+/Documentation/*.out
+/Documentation/*.gz
